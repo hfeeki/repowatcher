@@ -248,7 +248,7 @@ LOGGING = {
             'filename': '/home/oracal/webapps/repowatcher/logs/django.log',
             'maxBytes': '2048', # 2megabytes
             'formatter': 'verbose'
-        },       
+        },
         'complete_log_file':{
             'level': 'DEBUG',
             'class': 'logging.handlers.RotatingFileHandler',
@@ -275,7 +275,7 @@ INTERNAL_IPS = ('**********',)
 
 BROKER_URL = "redis://**********/0"
 CELERY_RESULT_BACKEND = "redis"
-CELERY_REDIS_PORT = **********
+CELERY_REDIS_PORT = "**********"
 CELERY_REDIS_DB = 0
 CELERY_IMPORTS = ("repowatcher.main.tasks", )
 CELERYD_CONCURRENCY = 4
