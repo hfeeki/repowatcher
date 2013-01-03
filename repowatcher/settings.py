@@ -79,14 +79,14 @@ STATICFILES_FINDERS = (
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': '**********',
-        'USER': '**********',
-        'PASSWORD':'**********',
+        'NAME': 'oracal_repowatcher',
+        'USER': 'oracal_repowatcher',
+        'PASSWORD':'ITrustChuck9612',
     }
 }
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = '**********'
+SECRET_KEY = 'ac3452$i-9ij2yui@@nba!sawsm%kh-4^9b)(u%^b(b03z7*56'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -145,7 +145,7 @@ INSTALLED_APPS = (
 CACHES = {
     'default': {
         'BACKEND': 'redis_cache.RedisCache',
-        'LOCATION': '**********',
+        'LOCATION': '127.0.0.1:30904',
         'VERSION': 1,
         'OPTIONS': {
             'DB': 0,
@@ -200,17 +200,16 @@ GOOGLE_OAUTH2_CLIENT_ID      = ''
 GOOGLE_OAUTH2_CLIENT_SECRET  = ''
 FOURSQUARE_CONSUMER_KEY      = ''
 FOURSQUARE_CONSUMER_SECRET   = ''
-GITHUB_APP_ID                = '**********'
-GITHUB_API_SECRET            = '**********'
+GITHUB_APP_ID                = 'a409f2fb46b121e2e131'
+GITHUB_API_SECRET            = 'cd7b9ee4b1865947ead5bb3c3be22489f6a80ca0'
 DROPBOX_APP_ID               = ''
 DROPBOX_API_SECRET           = ''
 FLICKR_APP_ID                = ''
 FLICKR_API_SECRET            = ''
 INSTAGRAM_CLIENT_ID          = ''
 INSTAGRAM_CLIENT_SECRET      = ''
-BITBUCKET_CONSUMER_KEY       = '**********'
-BITBUCKET_CONSUMER_SECRET    = '**********'
-
+BITBUCKET_CONSUMER_KEY       = 'PdSSZhCZagKXYNaN8p'
+BITBUCKET_CONSUMER_SECRET    = 'gA7EjVUpdpy4ehVeaUHSjYDDVRsvwkZY'
 
 SOCIAL_AUTH_ERROR_KEY = 'social_errors'
 
@@ -271,15 +270,14 @@ LOGGING = {
     }
 }
 
-INTERNAL_IPS = ('**********',)
+INTERNAL_IPS = ('86.26.174.165',)
 
-BROKER_URL = "redis://**********/0"
+BROKER_URL = "redis://localhost:56057/0"
 CELERY_RESULT_BACKEND = "redis"
-CELERY_REDIS_PORT = "**********"
+CELERY_REDIS_PORT = 51950
 CELERY_REDIS_DB = 0
 CELERY_IMPORTS = ("repowatcher.main.tasks", )
 CELERYD_CONCURRENCY = 4
 CELERYD_SOFT_TASK_TIME_LIMIT = 20
 import djcelery
 djcelery.setup_loader()
-
